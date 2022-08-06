@@ -3,7 +3,7 @@ import SummaryForm from '../SummaryForm'
 
 test('Initial conditions', () => {
   render(<SummaryForm />)
-  const checkbox = screen.getByRole('checkbox', { name: 'check' })
+  const checkbox = screen.getByRole('checkbox', { name: /terms and conditions/i })
 
   expect(checkbox).not.toBeChecked()
 
@@ -13,7 +13,7 @@ test('Initial conditions', () => {
 
 test('Checkbox enables button on first click and disables on second click', () => {
   render(<SummaryForm />)
-  const checkbox = screen.getByRole('checkbox', { name: 'check' })
+  const checkbox = screen.getByRole('checkbox', { name: /terms and conditions/i })
   const confirmBtn = screen.getByRole('button', { name: /confirm order/i })
 
   fireEvent.click(checkbox)
