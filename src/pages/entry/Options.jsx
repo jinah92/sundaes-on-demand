@@ -6,7 +6,7 @@ import ToppingOptions from './ToppingOption'
 import AlertBanner from '../common/AlertBanner'
 import { pricePerItem } from '../../constants'
 import { useOrderDetails } from '../../contexts/OrderDetails'
-import { formatCurrency } from '../../contexts/OrderDetails'
+import { formatCurrency } from '../../utilities'
 
 export default function Options({ optionType }) {
   const [items, setItems] = useState([])
